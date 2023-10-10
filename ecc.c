@@ -154,9 +154,6 @@ int main(int argc, char **argv) {
 
 #pragma region Ensure some source file is used
     if (source_file_count == 0) {
-      // TODO: If pwd contains c files => *.c
-      // TODO: If src in pwd and src has c files => src/*.c
-      // TODO: In other words, be smart about it ;)
       source_files[0] = "*.c";
       source_file_count = 1;
     }
