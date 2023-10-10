@@ -1,4 +1,4 @@
-# ´ecc´ - Easy Compiler & Compressor
+# `ecc` - Easy Compiler & Compressor
 
 `ecc` is an easy to use utility that makes compiling and running C programs easy, while also providing executable compression.
 
