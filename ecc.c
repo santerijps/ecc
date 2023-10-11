@@ -207,10 +207,9 @@ int main(int argc, char **argv) {
     char command[512] = {0};
     sprintf(
       command,
-      "%s -O%s -s -fno-ident -fno-asynchronous-unwind-tables %s %s -std=%s -o %s %s %s %s %s %s",
+      "%s -O%s -s -fno-ident -fno-asynchronous-unwind-tables -Wall -Wextra %s -std=%s -o %s %s %s %s %s %s %s",
       compiler,
       fast ? "fast" : "z",
-      !quiet ? "-Wall -Wextra" : "",
       strict ? "-Werror" : "",
       standard,
       out_file,
@@ -218,7 +217,8 @@ int main(int argc, char **argv) {
       includes_joined,
       libs_joined,
       dlls_joined,
-      source_files_joined
+      source_files_joined,
+      quiet ? ">nul" : ""
     );
     if (!quiet) {
       printf("\n=> COMPILE    ");
